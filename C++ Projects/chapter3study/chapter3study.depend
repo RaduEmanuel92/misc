@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1422979375 source:d:\projects\master atm\c++ study\chapter3study\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
+1422970998 source:d:\projects\master atm\c++ study\chapter3study\problem2.cpp
+	<iostream>
+	<iomanip>
+

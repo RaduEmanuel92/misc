@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1423065790 source:d:\projects\master atm\c++ study\chapter5\main.cpp
+	<iostream>
+	<iomanip>
+	<locale>
+
