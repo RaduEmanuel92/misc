@@ -1,0 +1,54 @@
+%Calculul caracteristicilor de frecventa pt SLN n=2
+csi=0.707;
+wn=0.1;
+num=[wn.^2];
+den=[1 2*csi*wn wn.^2];
+figure(1)
+w=logspace(-2,1,100);
+[mag,phase]=bode(num,den,w);
+c=cos(phase*pi./180);
+s=sin(phase*pi./180);
+u=c.*mag;
+v=s.*mag;
+subplot(221)
+semilogx(w,u,'-k');grid
+title('Carac amplitudine - frecv A(omega)');
+xlabel('omega(rad/sec)');
+ylabel('U(omega)');
+subplot(222)
+semilogx(w,phase,'-k');grid
+title('Carac faza frecv Fi (omega)');
+xlabel('omega(rad/sec)');
+ylabel('Fi(omega)(grade)');
+subplot(223)
+semilogx(w,u,'-k');grid
+title('Carac reala V(omega)');
+xlabel('omega(rad/sec)');
+ylabel('u (omega)');
+subplot(224)
+semilogx(w,v,'-k');grid
+title('Carac imaginara V(omega)');
+xlabel('omega(rad/sec)');
+ylabel('v(omega)');
+figure(2)
+%Locul de transfer
+w=logspace(-2,1,100);
+[u,v]=nyquist(num,den,w);
+plot(u,v,'-k');grid
+title('Locul de transfer');
+xlabel('U(omega)');
+ylabel('V(omega)');
+figure(3)
+%Caracteristicile logaritmice de frecventa
+w=logspace(-5,1,100);
+[mag,phase,w]=bode(num,den,w);
+subplot(211)
+semilogx(w,20*log10(mag),'-k');grid
+title('Caractlogaritmice Adb(omega)');
+xlabel('omega(rad/sec)');
+ylabel('Adb(omega)');
+subplot(212)
+semilogx(w,phase,'-k');grid
+title('Caracteristica logaritmica faza-frecventa');
+xlabel('omega(rad/sec)');
+ylabel('Fi(omega)(grade)');

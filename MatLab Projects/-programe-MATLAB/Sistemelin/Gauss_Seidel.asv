@@ -1,0 +1,83 @@
+% Gauss-Seidel
+% A matricea coeficientilor necunoscutelor
+% x vectorul necunoscutelor
+% eps eroarea absoluta cu care se determina solutiile
+function x=gs(v2,b)
+eps=0.1;
+A=vander(v2);
+A=fliplr(A);
+b=A'*b';
+A=A'*A;
+maxiter=2000;
+n=length(b);
+eps=0.000001;
+er=1;
+x=[0 0 0];
+% Calculul normei lui G(A)
+q(1)=0.0;
+for j=2:n
+   q(1)=q(1)+abs(bgs(1,j));
+end;
+for i=2:n
+   q(i)=0.0;
+   for j=1:i-1
+      q(i)=q(i)+abs(bgs(i,j))*q(j);
+   end;
+   for j=i+1:n
+      q(i)=q(i)+abs(bgs(i,j));
+   end;
+end;
+m=q(1);
+for i=2:n
+   if m<q(i)
+      m=q(i);
+   end;
+end;
+   if m>=1
+      fprintf(' Norma lui GS(A) este %f \n',m);
+      fprintf(' Metoda Gauss-Seidel nu converge \n');
+      break;
+   end;
+   if m<1
+   fprintf(' Norma lui GS(A) este %f \n',m);
+   fprintf(' Metoda Gauss-Seidel converge \n');
+% Determinarea iterativa a solutiei
+for i=1:n
+   t=-1.0/A(i,i);
+   c(i)=b(i)/A(i,i);
+   for j=1:n
+      A(i,j)=A(i,j)*t;
+   end;
+end;
+m=m/(1-m);
+k=0;
+max=1.;
+for i=1:n x(i)=x0(i);end;
+while (m*max>eps)
+   k=k+1;
+   for i=1:n
+      t=c(i);
+      for j=1:n
+         t=t+A(i,j)*x0(j);
+      end;
+         x0(i)=x0(i)+t;
+   end;
+fprintf(' Solutia dupa iteratia %d este: \n',k);
+for i=1:n
+   fprintf(' x ( %d ) = %f \n',i,x0(i));
+end;
+pause;
+for i=1:n mod(i)=abs(x(i)-x0(i));end;
+   max=mod(1);
+for i=2:n
+   if max<mod(i)
+      max=mod(i);
+   end;
+end;
+for i=1:n x(i)=x0(i); end;
+end;
+fprintf(' \n Solutia dupa %d iteratii este: \n',k);
+for i=1:n
+   fprintf(' x ( %d ) = %f \n',i,x(i));
+end;
+end;
