@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1423081843 source:d:\projects\master atm\c++ study\whileloop\main.cpp
+	<iostream>
+	<iomanip>
+
