@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1423003819 source:d:\projects\master atm\c++ study\exercisescap3\main.cpp
+	<iostream>
+	<iomanip>
+

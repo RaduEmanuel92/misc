@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1423490070 source:d:\projects\master atm\c++ study\dynamic\moredynamic\main.cpp
+	<iostream>
+	<iomanip>
+	<vector>
+	<memory>
+	<cmath>
+

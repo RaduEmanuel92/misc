@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1423229273 source:d:\projects\master atm\c++ study\problmes_for\main.cpp
+	<iostream>
+	<iomanip>
+	<array>
+

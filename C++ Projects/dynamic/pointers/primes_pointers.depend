@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1423321060 source:d:\projects\master atm\c++ study\fibbonacci\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
