@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1452297040 source:d:\projects\master atm\c++ study\chapter 7(strings)\newstring\main.cpp
+	<iostream>
+	<string>
+	<iomanip>
+	<locale>
+	<vector>
+

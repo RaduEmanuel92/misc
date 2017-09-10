@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1424587831 source:d:\projects\master atm\c++ study\chapter 7(strings)\string2\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<iomanip>
+	<memory>
+
