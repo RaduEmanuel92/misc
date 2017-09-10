@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1450478267 source:d:\projects\master atm\c++ study\beginning\main.cpp
+	<iostream>
+	<locale>
+	<limits>
+	<iomanip>
+
+1422548021 source:d:\projects\master atm\c++ study\beginning\main(inches).cpp
+	<iostream>
+	<cmath>
+
